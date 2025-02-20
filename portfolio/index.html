@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+   <link rel="stylesheet" href="style.css">
+   <script src="https://kit.fontawesome.com/412c2498d4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div id="header">
+      <div class="container">
+         <nav>
+          
+            <ul id="sidemenu">
+               <li><a href="#header">Home</a></li>
+               <li><a href="#about">About</a></li>
+               <li><a href="#portfolio">Project</a></li>
+                <li><a href="#contact">Contact</a></li>   
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="sidemenu()"></i>
+         </nav>
+         <div class="header-text">
+           <h1>Hi, I'm <span>Sahil </span></h1>
+           <p>B.Tech CSE Student</p>
+         </div>
+      </div>
+      </div>
+    <!-- ----------------------About---------------------- -->
+     <div id="about">
+      <div class="container">
+         <div class="row">
+            <div class="about-col-1">
+               <img src="image/image.png">
+            </div>
+            <div class="about-col-2">
+               <h1 class="sub-title">About Me</h1>
+               <p>I am a first-year B.Tech student in Computer Science and Engineering with a specialization in Artificial
+                  Intelligence and Machine Learning at Dronacharya College of Engineering. I am excited to be diving
+                  into the field of AI and technology, with a strong foundation in programming, problem-solving, and 
+                  analytical thinking.</p>
+
+                  <div class="tab-titles">
+                     <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                     <p class="tab-links" onclick="opentab('Education')">Education</p>
+                  </div>
+                  <div class="tab-contents active-tab" id="skills">
+                     <ul>
+                        <li><span>Coding Language</span><br>Java <br>C</li>
+                        <li><span>Web Development</span><br>Html <br>CSS</li>
+                        <li><span>Compitative Programming</span><br>CodeChef</li>
+                     </ul>
+                  </div>
+                  <div class="tab-contents" id="Education">
+                     <ul>
+                        <li><span>Persuing B.Tech</span><br>Dronacharya College of Engineering </li>
+                        <li><span>Class 12</span><br>Adarsh jain public school</li>
+                        <li><span>Class 10</span><br>Kendriya Vidyalaya</li>
+                     </ul>
+                  </div>
+            </div>
+         </div>
+      </div>
+     </div>
+<!-- ----------------------Portfolio---------------------- -->
+    <div id="portfolio">
+      <div class="container">
+         <h1 class="sub-title">My Work</h1>
+         <div class="work-list">
+            <div class="work">
+              <img src="image/work 1.jpg">
+               <div class="layer">
+                  <h3>Basic Calculator</h3>
+                  <p>A basic calculator built using java</p>
+                  <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+               </div>
+            </div>
+            <div class="work">
+               <img src="image/work 2.png">
+               <div class="layer">
+                  <h3>Income Tax Calculator</h3>
+                  <p>A basic Income Tax calculator built using java</p>
+                  <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+               </div>
+            </div>
+            <div class="work">
+               <img src="image/work 3.jpg">
+               <div class="layer">
+                  <h3>Rock Paper Scissor Game</h3>
+                  <p>A basic concole based game built using java</p>
+                  <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+               </div>
+            </div>
+         </div>
+         <a href="#" class="btn">See more</a>
+      </div>
+    </div> 
+
+<!-- ----------------------Contact---------------------- -->
+    <div id="contact">
+      <div class="container">
+         <div class="row">
+            <div class="contact-left">
+               <h1 class="sub-title">Contact Me</h1>
+               <p><i class="fa-solid fa-paper-plane"></i>sahilkv.5743@gmail.com</p>
+             
+               <div class="social-icons">
+                  <a href="#"><i class="fa-brands fa-github"></i></a>
+                  <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                  </div>
+                  <a href="#" class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+               <form>
+                  <input type="text" name="Name" placeholder="Your Name" required>
+                  <input type="email" name="Email" placeholder="Your Email" required>
+                  <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                  <button type="submit" class="btn btn2">Submit</button>
+               </form>
+            </div>
+            </div>
+         </div>
+         <div class="copyright">
+            <p>copyright <i class="fa-regular fa-copyright"></i> Sahil</p>
+         </div>
+      </div>
+              
+
+
+
+
+
+
+
+
+
+
+
+
+     <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      function opentab(tabname){
+         for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+         }
+         for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+         }
+         event.currentTarget.classList.add("active-link");
+         document.getElementById(tabname).classList.add("active-tab");
+        
+      }
+     </script>
+     <script>
+      var sidemenu = document.getElementById("sidemenu");
+      function sidemenu(){
+         sidemenu.style.right = "0";
+      }
+      function closemenu(){
+         sidemenu.style.right = "-200px";
+      }        
+     </script>
+
+   </body>
+   </html>
